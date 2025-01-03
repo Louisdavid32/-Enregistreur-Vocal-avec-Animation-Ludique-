@@ -1,0 +1,102 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+/* Bouton central */
+#startButton {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#startButton:hover {
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+/* Carte d'enregistrement */
+#recordingCard {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 50, 0.8);
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Icône du micro */
+#microIcon {
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Ondes circulaires */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+.wave {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+    top: 19%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+}
+
+/* Boutons Send et Cancel */
+#actionButtons {
+    display: none;
+    margin-top: 20px;
+}
+
+#actionButtons button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+#actionButtons button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Icône de la poubelle */
+#trashIcon {
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
